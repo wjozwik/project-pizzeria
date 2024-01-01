@@ -3,9 +3,9 @@
 {
   'use strict';
 
-const select = {
-  templateOf: {
-    menuProduct: "#template-menu-product",
+  const select = {
+    templateOf: {
+      menuProduct: "#template-menu-product",
     },
     containerOf: {
       menu: '#product-list',
@@ -52,7 +52,7 @@ const select = {
     menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
   };
 
-  class Product{ 
+  class Product { 
     constructor(id, data){
       const thisProduct = this;
 
@@ -67,7 +67,7 @@ const select = {
       console.log('new Product:', thisProduct);
     }
 
-    renderInMenu(){
+    renderInMenu() {
       const thisProduct = this;
 
       /* generate HTML based on template */
@@ -80,7 +80,7 @@ const select = {
       menuContainer.appendChild(thisProduct.element);
     }
 
-    getElements(){
+    getElements() {
       const thisProduct = this;
     
       thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
@@ -91,7 +91,7 @@ const select = {
       thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper);
     }
     
-    initAccordion(){
+    initAccordion() {
       const thisProduct = this;
       /* find the clickable trigger (the element that should react to clicking) */
       // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
@@ -110,7 +110,7 @@ const select = {
       });
     }
 
-    initOrderForm(){
+    initOrderForm() {
       const thisProduct = this;
 
       thisProduct.form.addEventListener('submit', function(event){
@@ -187,13 +187,13 @@ const select = {
   }
 
   const app = {
-    initData: function(){
+    initData: function() {
       const thisApp = this;
 
       thisApp.data = dataSource;
     },
     
-    initMenu: function(){
+    initMenu: function() {
       const thisApp = this;
 
       console.log('thisApp.data:', thisApp.data);
@@ -203,7 +203,7 @@ const select = {
       }
     },
 
-    init: function(){
+    init: function() {
       const thisApp = this;
       console.log('*** App starting ***');
       console.log('thisApp:', thisApp);
