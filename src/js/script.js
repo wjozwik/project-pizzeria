@@ -222,7 +222,12 @@
       const newValue = parseInt(value);
 
       /* TO DO: Add validation */
-      if (thisWidget.value !== newValue && !isNaN(newValue)) {
+      if (
+        thisWidget.value !== newValue && 
+        !isNaN(newValue) && 
+        newValue <= settings.amountWidget.defaultMax &&
+        newValue >= settings.amountWidget.defaultMin
+      ) {
         thisWidget.value = newValue;
       }
       
@@ -237,11 +242,11 @@
       });
       thisWidget.linkDecrease.addEventListener('click', function(event) {
         event.preventDefault();
-        thisWidget.setValue(--thisWidget.value);
+        thisWidget.setValue(thisWidget.value - 1);
       });
       thisWidget.linkIncrease.addEventListener('click', function(event) {
         event.preventDefault();
-        thisWidget.setValue(++thisWidget.value);
+        thisWidget.setValue(thisWidget.value + 1);
       });
     }
   }
