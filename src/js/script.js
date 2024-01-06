@@ -226,9 +226,8 @@
     
       // update calculated price in the HTML
       /* multiply price by amount */
-      price *=thisProduct.amountWidget.value;
-
       thisProduct.priceSingle = price;
+      price *=thisProduct.amountWidget.value;
       thisProduct.dom.priceElem.innerHTML = price;
     }
 
