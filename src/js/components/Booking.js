@@ -291,7 +291,7 @@ class Booking {
         parsedResponse.duration,
         parsedResponse.table
       );
-
+      thisBooking.updateDOM();
       console.log('thisBooking.booked', thisBooking.booked);
     });
   }
