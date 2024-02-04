@@ -117,6 +117,17 @@ const app = {
     const homePageContainer = document.querySelector(select.containerOf.homePage);
 
     thisApp.home = new Home(homePageContainer);
+
+    thisApp.homeDOM = {};
+    thisApp.homeDOM.homeBoxes = homePageContainer.querySelectorAll(select.home.boxes);
+    for (let box of thisApp.homeDOM.homeBoxes) {
+      box.addEventListener('click', function () {
+        const clickedElement = this;
+        const id = clickedElement.getAttribute('data');
+        thisApp.activatePage(id);
+        window.location.hash = '#/' + id;
+      });
+    }
   },
 
   init: function(){

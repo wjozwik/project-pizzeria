@@ -9,6 +9,8 @@
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
+  <link rel="stylesheet" href="vendor/flickity.css" media="screen">
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -106,13 +108,93 @@
       <div class="home-widget">
         <section class="boxes">
           <div class="row">
-            <div class="column"><h2>order online</h2></div>
-            <div class="column"><h2>book a table</h2></div>
+            <div class="column left animation" data="order">
+              <h2>order online</h2>
+              <span>Delicious food delivered to your door</span>
+            </div>
+            <div class="column right animation" data="booking">
+              <h2>book a table</h2>
+              <span>Book a table and eat at the restaurant</span>
+            </div>
           </div>
-          <div class="column"><h2>opening hours</h2></div>
+          <div class="row">
+            <div class="column">
+              <h2>opening hours:</h2>
+              <p>MON-SUN, 12AM-11PM</p>
+            </div>
+          </div>
         </section>
-        <section class="carousel">carousel</section>
-        <section class="gallery">gallery</section>
+        <section class="carousel">
+          <div class="main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "prevNextButtons": false}'>
+            <div class="carousel-cell">
+              <div class="img-wrapper">
+                <img src="images/gallery/pizza-3.jpg" alt="pizza1">
+              </div>
+              <div class="text-wrapper">
+                <h2 class="carousel-subtitle">Great venue</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit vulputate enim aliquam lacinia. Integer maximus lobortis tortor, id rhoncus turpis elementum at.</p>
+                <p>- Andrew Space</p>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <div class="img-wrapper">
+                <img src="images/gallery/pizza-3.jpg" alt="pizza1">
+              </div>
+              <div class="text-wrapper">
+                <h2 class="carousel-subtitle">Best Service</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat a odio quis elementum. Fusce et leo quis mauris et et orci. Vestibulum non nunc vehicula, tristique nibh sed, facilisis mi.</p>
+                <p>- Kaslik Amanov</p>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <div class="img-wrapper">
+                <img src="images/gallery/pizza-3.jpg" alt="pizza1">
+              </div>
+              <div class="text-wrapper">
+                <h2 class="carousel-subtitle">Good snacks</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lectus sit amet lorem fermentum tincidunt. Ut nec neque purus. Quisque porta convallis ex in varius. Praesent iaculis nunc, nec porta mauris iaculis. </p>
+                <p>- Rupert Sasnov</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='gallery'>
+          <div class='image'><img src='images/gallery/pizza-4.jpg' alt=''><div
+              class='icons'
+            ><a href='#'><i class='fa-solid fa-heart'></i></a><a href='#'>
+                <i class='fa-solid fa-share-nodes'></i>
+              </a></div></div>
+          <div class='image'><img src='images/gallery/pizza-5.jpg' alt=''><div
+              class='icons'
+            ><a href='#'><i class='fa-solid fa-heart'></i></a><a href='#'>
+                <i class='fa-solid fa-share-nodes'></i>
+              </a></div></div>
+          <div class='image'>
+            <img src='images/gallery/pizza-6.jpg' alt=''>
+            <div class='icons'>
+              <a href='#'><i class='fa-solid fa-heart'></i></a>
+              <a href='#'><i class='fa-solid fa-share-nodes'></i></a>
+            </div>
+          </div>
+          <div class='image'><img src='images/gallery/pizza-7.jpg' alt=''><div
+              class='icons'
+            ><a href='#'><i class='fa-solid fa-heart'></i></a><a href='#'>
+                <i class='fa-solid fa-share-nodes'></i>
+              </a></div></div>
+          <div class='image'><img src='images/gallery/pizza-8.jpg' alt=''><div
+              class='icons'
+            ><a href='#'><i class='fa-solid fa-heart'></i></a><a href='#'>
+                <i class='fa-solid fa-share-nodes'></i>
+              </a></div></div>
+          <div class='image'><img src='images/gallery/pizza-9.jpg' alt=''><div
+              class='icons'
+            ><a href='#'><i class='fa-solid fa-heart'></i></a><a href='#'>
+                <i class='fa-solid fa-share-nodes'></i>
+              </a></div></div>
+        </section>
+        <footer>
+          <a href='#'>View more on Instagram</a>
+        </footer>
       </div>
   </script>
 
@@ -264,6 +346,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="vendor/range-slider.min.js"></script>
+  <script src="vendor/flickity.pkgd.min.js"></script>
+  <script src="https://kit.fontawesome.com/98055fee39.js" crossorigin="anonymous"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 </html>

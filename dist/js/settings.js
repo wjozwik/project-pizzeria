@@ -51,6 +51,9 @@ export const select = {
     starterCheckbox: 'input[name="starter"]',
     bookTableBtn: 'button[type="submit"]',
   },
+  home: {
+    boxes: '.animation'
+  },
   nav: {
     links: '.main-nav a',
   },
